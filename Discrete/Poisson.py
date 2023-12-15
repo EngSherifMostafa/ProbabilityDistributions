@@ -2,8 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import poisson
 from numpy import random
-from plot import plot_pmf, plot_cdf
-
 
 # Generate a random 1x10 distribution for occurrence 2:
 x = random.poisson(lam=2, size=10)
@@ -19,22 +17,45 @@ pmf = np.round(pmf, 5)
 for val, prob in zip(k, pmf):
     print(f"k-value {val} has probability = {prob}")
 
-# Plot Poisson PMF using bar plot
-plot_pmf(dis_type="Poisson", title="PMF", x_axis=k, y_axis=pmf)
+
 
 # Calculate the Poisson CDF
-cdf = poisson.cdf(k, mu=7)
+cdf = poisson.cdf(k, mu=6)
 cdf = np.round(cdf, 3)
 for val, prob in zip(k, cdf):
     print(f"k-value {val} has probability = {prob}")
 
 # Plot Poisson CDF using step plot
-plot_cdf(dis_type="Poisson", title="CDF", x_axis=k, y_axis=cdf)
+# Plot Poisson PMF using bar plot
+plt.figure(figsize=(12,6))
+plt.subplot(121)
+plt.title("Probability Mass Function")
 
+plt.xlabel('k')
+plt.ylabel('Probability')
+plt.plot(k, pmf, "bo", ms=8, label="dddddd")
+plt.vlines(k, 0, pmf, colors="b", lw=5, alpha=0.5)
+    
+plt.subplot(122)
+plt.title("Histogram")
+plt.bar(k, pmf, align='center', alpha=0.7)
+plt.xlabel('k')
+plt.ylabel('Probability')
+plt.show()
+
+
+plt.title("Cumulative Distribution Function")
+plt.step(k, cdf, where='post', label='CDF')
+plt.xlabel('k')
+plt.ylabel('Cumulative Probability')
+plt.legend()
+plt.show()
 # Calculate the first four moments: expectation, variance
-mu = 7
+mu = 6
 mean, var, skew, kurt = poisson.stats(mu, moments='mvsk')
 print("Expectation is : \n", mean)
 print("Variance is : \n", var)
 print("3rd Moment is : \n", skew)
 print("4th Moment is : \n", kurt)
+
+
