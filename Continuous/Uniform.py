@@ -7,8 +7,7 @@ a = 7  # Lower bound
 b = 12 # Upper bound
 
 # Generate random variables from the uniform distribution
-sample_size = 1
-random_vars = uniform.rvs(loc=a, scale=b-a, size=sample_size)
+random_vars = uniform.rvs(loc=a, scale=b-a)
 
 # Calculate the mean and variance
 mean = uniform.mean(loc=a, scale=b-a)
