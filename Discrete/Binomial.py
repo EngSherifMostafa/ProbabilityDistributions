@@ -1,50 +1,39 @@
-from scipy.stats import binom
+import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats import binom
 
-n = 6
-p = 0.6
+# Set the parameters for the binomial distribution
+n = 30 # Number of trials
+p = 0.5 # Probability of success
 
-r_values = list(range(n + 1))
+# Generate random variables from the binomial distribution
+sample_size = 100
+random_vars = binom.rvs(n, p, size=sample_size)
 
-mean, var = binom.stats(n, p)
+# Calculate the mean and variance
+mean = binom.mean(n, p)
+variance = binom.var(n, p)
 
-dist = [binom.pmf(r, n, p) for r in r_values ]
-
-print("r\tp(r)")
-for i in range(n + 1):
- print(str(r_values[i]) + "\t" + str(dist[i]))
-
-print("mean = "+str(mean))
-print("variance = "+str(var))
-
-r_values = list(range(n + 1))
-
-dist = [binom.pmf(r, n, p) for r in r_values ]
-
-
-
-mean = n * p
-variance = n * p * (1 - p)
-
-print(f"mean = {mean}")
-print(f"variance = {variance}")
-
-
-
-plt.figure(figsize=(12,6))
-plt.subplot(121)
-plt.title("Probability Mass Function")
-
-plt.xlabel('')
+# Plot the PMF
+x = np.arange(0, n+1)
+pmf = binom.pmf(x, n, p)
+plt.stem(x, pmf, basefmt=' ', label='PMF')
+plt.xlabel('Random Variable')
 plt.ylabel('Probability')
-plt.plot(r_values, dist, "bo", ms=8, label="dddddd")
-plt.vlines(r_values, 0, dist, colors="b", lw=5, alpha=0.5)
-    
-plt.subplot(122)
-plt.title("Histogram")
-plt.bar(r_values, dist, align='center', alpha=0.7)
-plt.xlabel('')
-plt.ylabel('Probability')
+plt.title('Binomial Distribution - PMF')
+plt.legend()
 plt.show()
-#########################################################################
 
+# Plot the CDF
+cdf = binom.cdf(x, n, p)
+plt.plot(x, cdf, 'bo', label='CDF')
+plt.step(x, cdf, label='CDF', where='post')
+plt.xlabel('Random Variable')
+plt.ylabel('Cumulative Probability')
+plt.title('Binomial Distribution - CDF')
+plt.legend()
+plt.show()
+
+# Print the mean and variance
+print("Mean:", mean)
+print("Variance:", variance)
