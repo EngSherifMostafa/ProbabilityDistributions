@@ -40,12 +40,15 @@ def predict_match_outcome(average_goals_scored_home, average_goals_scored_away, 
 
 # Hypothetical data for illustration purposes
 goals_scored_home_team_season = int (input("Enter goals scored home team season"))
-matches_played_home_team_season = matches_played_away_team_season = int (input("Enter matches played this season "))
-goals_scored_away_team_season = int (input("Enter goals scored away team season"))
-
-
 goals_conceded_home_team_season = int (input("Enter goals conceded home team season"))
+matches_played_home_team_season = int (input("Enter matches played this season for home team "))
+
+
+goals_scored_away_team_season = int (input("Enter goals scored away team season"))
 goals_conceded_away_team_season = int (input("Enter goals conceded away team season"))
+matches_played_away_team_season = int (input("Enter matches played this season for away team "))
+
+
 # Calculate average goals for the home and away teams
 average_goals_scored_home_team = calculate_average_goals(goals_scored_home_team_season, matches_played_home_team_season)
 average_goals_scored_away_team = calculate_average_goals(goals_scored_away_team_season, matches_played_away_team_season)
