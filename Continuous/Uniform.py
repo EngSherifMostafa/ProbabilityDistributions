@@ -17,10 +17,7 @@ variance = uniform.var(loc=a, scale=b-a)
 # Plot the PDF
 x = np.linspace(a-1 , b+1, 1000)
 pdf = uniform.pdf(x, loc=a, scale=b-a)
-
 plt.plot(x, pdf, label='PDF')
-#plt.axvline(a, color='blue', linestyle='-', label='a')
-#plt.axvline(b, color='blue', linestyle='-', label='b')
 plt.xlabel('Random Variable')
 plt.ylabel('Probability Density')
 plt.title('Uniform Continuous Distribution - PDF')
@@ -30,10 +27,7 @@ plt.show()
 # Plot the CDF
 x_cdf = np.linspace(a-1, b+1, 1000)
 cdf = uniform.cdf(x_cdf, loc=a, scale=b-a)
-
 plt.plot(x_cdf, cdf, label='CDF')
-#plt.axhline(0, color='blue', linestyle='-')
-#plt.axhline(1, color='blue', linestyle='-')
 plt.xlabel('Random Variable')
 plt.ylabel('Cumulative Probability')
 plt.title('Uniform Continuous Distribution - CDF')
