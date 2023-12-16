@@ -1,24 +1,45 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import uniform
-from plot import plot_pdf, plot_cdf
 
+# Set the parameters for the uniform distribution
+a = 7  # Lower bound
+b = 12 # Upper bound
 
-lower_bound = 0
-upper_bound = 1
-rv = uniform(loc=lower_bound, scale=upper_bound - lower_bound)
-random_var = rv.rvs(size=1000)
-print('Random Variable:', random_var)
-x = np.linspace(lower_bound, upper_bound, 100)
-f = rv.pdf(x)
-print('PDF:', f)
-F = rv.cdf(x)
-print('CDF:', F)
-mean = rv.mean()
-variance = rv.var()
-print('Mean:', mean)
-print('Variance:', variance)
+# Generate random variables from the uniform distribution
+sample_size = 1
+random_vars = uniform.rvs(loc=a, scale=b-a, size=sample_size)
 
+# Calculate the mean and variance
+mean = uniform.mean(loc=a, scale=b-a)
+variance = uniform.var(loc=a, scale=b-a)
 
-plot_pdf(dis_type="Uniform", title="PDF", x_axis=x, y_axis=f)
-plot_cdf(dis_type="Uniform", title="CDF", x_axis=x, y_axis=F)
+# Plot the PDF
+x = np.linspace(a-1 , b+1, 1000)
+pdf = uniform.pdf(x, loc=a, scale=b-a)
+
+plt.plot(x, pdf, label='PDF')
+#plt.axvline(a, color='blue', linestyle='-', label='a')
+#plt.axvline(b, color='blue', linestyle='-', label='b')
+plt.xlabel('Random Variable')
+plt.ylabel('Probability Density')
+plt.title('Uniform Continuous Distribution - PDF')
+plt.legend()
+plt.show()
+
+# Plot the CDF
+x_cdf = np.linspace(a-1, b+1, 1000)
+cdf = uniform.cdf(x_cdf, loc=a, scale=b-a)
+
+plt.plot(x_cdf, cdf, label='CDF')
+#plt.axhline(0, color='blue', linestyle='-')
+#plt.axhline(1, color='blue', linestyle='-')
+plt.xlabel('Random Variable')
+plt.ylabel('Cumulative Probability')
+plt.title('Uniform Continuous Distribution - CDF')
+plt.legend()
+plt.show()
+
+# Print the mean and variance
+print("Mean:", mean)
+print("Variance:", variance)
