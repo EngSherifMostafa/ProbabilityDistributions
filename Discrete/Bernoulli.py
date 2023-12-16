@@ -29,20 +29,13 @@ F = rv.cdf(x)
 mean, var = rv.stats(moments="mv")
 print(f"mean: {mean}\nVariance: {var}")
 
-plt.subplot(121)
-plt.title("Probability Mass Function")
 
-plt.xlabel('x')
-plt.ylabel('f')
+plt.title("")
+
+
 plt.plot(x, f, "bo", ms=8, label="dddddd")
 plt.vlines(x, 0, f, colors="b", lw=5, alpha=0.5)
-    
-plt.subplot(122)
-plt.title("Histogram")
-plt.bar(x, f, align='center', alpha=0.7)
-plt.xlabel('x')
-plt.ylabel('f')
+
 plt.show()
 
 
-plot_cdf(dis_type="Bernoulli", title='CDF', x_axis=x, y_axis=F)
