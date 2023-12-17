@@ -13,6 +13,10 @@ random_vars = np.random.normal(loc=mu, scale=sigma, size=sample_size)
 mean = np.mean(random_vars)
 variance = np.var(random_vars)
 
+# Print the mean and variance
+print("Mean:", mean)
+print("Variance:", variance)
+
 # Plot the PDF
 x = np.linspace(mu - 4*sigma, mu + 4*sigma, 1000)
 pdf = 1/(sigma * np.sqrt(2 * np.pi)) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
@@ -32,7 +36,3 @@ plt.ylabel('Cumulative Probability')
 plt.title('Gaussian Continuous Distribution - CDF')
 plt.legend()
 plt.show()
-
-# Print the mean and variance
-print("Mean:", mean)
-print("Variance:", variance)
