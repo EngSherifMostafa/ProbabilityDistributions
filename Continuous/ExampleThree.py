@@ -7,7 +7,7 @@ n_ofEarthQuack = 20
 n_ofyears = 22
 mean = n_ofyears / n_ofEarthQuack  # lambda = 1/mean
 
-# What is the probability of the next earthquake in the next 6 months?
+
 time_period = 6  # 6 months
 x = 1 / (mean * 12)  # Rate lambda for 1 event per mean years
 probability_next_6_months = expon.pdf(time_period, scale=1 / x)

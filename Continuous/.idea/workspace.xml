@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca49bb8b-98f7-466b-b4ab-550a84339e72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ExampleThree.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleThree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +33,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Python",
+    "last_opened_file_path": "D:/python proj 3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -91,6 +91,9 @@
       <workItem from="1702557299676" duration="1109000" />
       <workItem from="1702567317389" duration="545000" />
       <workItem from="1702900086965" duration="16000" />
+      <workItem from="1702900269052" duration="7000" />
+      <workItem from="1702900934814" duration="90000" />
+      <workItem from="1702901042060" duration="24000" />
     </task>
     <servers />
   </component>
