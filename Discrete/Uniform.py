@@ -21,7 +21,7 @@ plt.ylabel('P(X)')
 
 
 #Plot PMF using plt.vlines
-plt.vlines(values, ymin=0, ymax=pmf, colors='blue', linestyle='-', linewidth=2)
+plt.vlines(values, ymin=0, ymax=pmf, colors='blue', linestyle='--', linewidth=2)
 plt.title('Probability Mass Function (PMF) of X')
 plt.xlabel('X')
 plt.ylabel('P(X)')
