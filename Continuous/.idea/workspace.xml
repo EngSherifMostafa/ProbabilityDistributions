@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca49bb8b-98f7-466b-b4ab-550a84339e72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExampleThree.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExampleThree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Theoretical/Continuous/ExampleThree.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Theoretical/Continuous/ExampleThree.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,26 +25,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Exponential.executor": "Run",
-    "Python.Gaussian.executor": "Run",
-    "Python.Uniform.executor": "Run",
-    "Python.plot.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/python proj 3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Exponential.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Gaussian.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Uniform.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/python proj 3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Gaussian" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Continuous" />
@@ -94,6 +96,9 @@
       <workItem from="1702900269052" duration="7000" />
       <workItem from="1702900934814" duration="90000" />
       <workItem from="1702901042060" duration="24000" />
+      <workItem from="1702983234328" duration="22000" />
+      <workItem from="1702983267927" duration="70000" />
+      <workItem from="1702987788836" duration="26000" />
     </task>
     <servers />
   </component>
